@@ -20,5 +20,6 @@ from apps.blog import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('contacto', views.contact, name='contact'),
+    #path(r'^$', views.index, name='index'),
+    path('blog/', include('apps.blog.urls'))
 ]
