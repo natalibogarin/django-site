@@ -1,0 +1,19 @@
+{% extends "base.html" %}  <!-- Agregando esta linea indicamos que hereda de base.html -->
+{% load static %}
+
+{% block contenido %}
+<div class="centerstage">
+
+
+    {% for post in posts %}
+        <div class="post">
+
+            <h1><a href="{% url 'apps.blog:blog_detail' id=post.pk %}">{{ post.title }}</a></h1>
+            <div class="date">
+                <p>Published on: {{ post.published_date|date:"D M Y"}}</p>
+            </div>
+            <a href="{% url 'apps.blog:blog_detail' id=post.pk %}">Comments: {{ post.approve_comments.count }}</a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

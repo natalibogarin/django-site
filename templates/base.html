@@ -54,8 +54,8 @@
                 <a href="#skill" class="nav-item nav-link">Habilidades</a>
                 <a href="#qualification" class="nav-item nav-link">Educación</a>
                 <a href="#service" class="nav-item nav-link">Servicios</a>
-                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-                <a href="#testimonial" class="nav-item nav-link">Blog</a>
+                <a href="{% url 'apps.portfolio:projects' %}" class="nav-item nav-link">Portfolio</a>
+                <a href="{% url 'apps.blog:blog_index'%}" class="nav-item nav-link">Blog</a>
             </div>
             <a href="#contact" class="btn btn-menu d-none d-lg-block" style="background-color:#457efa; color: #ffffff;">Contactame!</a>
         </div>
