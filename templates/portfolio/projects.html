@@ -1,0 +1,31 @@
+{% extends "base.html" %}  <!-- Agregando esta linea indicamos que hereda de base.html -->
+{% load static %}
+
+{% block contenido %}
+    <!-- Services Start -->
+    <div class="container-fluid pt-5" id="service">
+        <div class="container">
+            <div class="service-h4 position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Servicios</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Servicios</h1>
+            </div>
+            
+            <div class="row pb-3">
+                {% for project in projects %}
+                <div class="service-box col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <img src="{{MEDIA_ROOT}}/media/{{project.image}}" alt="" srcset="">
+                        <h4 class="font-weight-bold m-0">{{ project.title }}</h4>
+                    </div>
+                    <p>{{project.technology}}</p>
+                    <p>{{project.description}}</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                </div>
+                {% endfor %}
+            </div>
+            
+        </div>
+    </div>
+    <!-- Services End -->
+
+{% endblock %}

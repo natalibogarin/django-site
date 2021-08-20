@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load static%}
+{% load static %}
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -54,7 +54,7 @@
                 <a href="#skill" class="nav-item nav-link">Habilidades</a>
                 <a href="#qualification" class="nav-item nav-link">Educación</a>
                 <a href="#service" class="nav-item nav-link">Servicios</a>
-                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                <a href="{% url 'apps.portfolio:projects'  %}" class="nav-item nav-link">Portfolio</a>
                 <a href="#testimonial" class="nav-item nav-link">Blog</a>
             </div>
             <a href="#contact" class="btn btn-menu d-none d-lg-block" style="background-color:#457efa; color: #ffffff;">Contactame!</a>
@@ -380,19 +380,19 @@
 <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="{% static 'lib/typed/typed.min.js' %}"></script>
-    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/typed/typed.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.js' %}"></script>
     <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
     <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
     <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
     <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
 
     <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+    <script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+    <script src="{% static 'mail/contact.js' %}"></script>
 
     <!-- Template Javascript -->
-    <script src="{% static 'js/main.js'%}"></script>
+    <script src="{% static 'js/main.js' %} "></script>
 </body>
 </html>
 
