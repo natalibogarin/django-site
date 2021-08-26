@@ -1,3 +1,5 @@
 *.pyc  *~  
 __pycache__  
-django_site/settings/base.py
+db.sqlite3
+django_site/settings/testing.py
+django_site/settings/local.py
