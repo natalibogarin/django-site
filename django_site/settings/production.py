@@ -2,16 +2,12 @@
 from .base import *
 
 DEBUG = False
-ALLOWED_HOSTS = ['127.0.0.1', 'natalibogarin.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'django_site',
-        'USER': 'name',
-        'PASSWORD':'',
-        'HOST':'localhost',
-        'PORT':'',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
