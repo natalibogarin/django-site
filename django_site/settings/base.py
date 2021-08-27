@@ -16,7 +16,7 @@ import sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #BASE_DIR = Path(__file__).resolve().parent.parent
-BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
 
@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'django-insecure-zxmefe@f5n1^g-46slimt2&fj(@2sc3&7$0)7$x=4kj4hu(ot^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 
 # Application definition
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.blog',
-    'apps.portfolio'
+    'apps.portfolio',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'django_site.urls'
 TEMPLATE_DIR = os.path.join(os.path.dirname(BASE_DIR),'templates')
 TEMPLATE_DIR_PORTFOLIO = os.path.join(os.path.dirname(BASE_DIR),'templates/portfolio')
 TEMPLATE_DIR_BLOG = os.path.join(os.path.dirname(BASE_DIR),'templates/blog')
- 
+
 
 TEMPLATES = [
     {
